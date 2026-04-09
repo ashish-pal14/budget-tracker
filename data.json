@@ -1,0 +1,60 @@
+{
+  "transactions": [
+    {
+      "id": 1775750547250,
+      "type": "income",
+      "amount": 100,
+      "category": "income",
+      "description": "",
+      "date": "2026-04-09T16:02:27.250Z"
+    },
+    {
+      "id": 1775750598832,
+      "type": "expense",
+      "amount": 50,
+      "category": "income--1",
+      "description": "",
+      "date": "2026-04-09T16:03:18.832Z"
+    },
+    {
+      "id": 1775750621642,
+      "type": "expense",
+      "amount": 10000,
+      "category": "income--1",
+      "description": "",
+      "date": "2026-04-09T16:03:41.643Z"
+    },
+    {
+      "id": 1775750625898,
+      "type": "expense",
+      "amount": 500,
+      "category": "income--1",
+      "description": "",
+      "date": "2026-04-09T16:03:45.898Z"
+    },
+    {
+      "id": 1775750631676,
+      "type": "income",
+      "amount": 10000,
+      "category": "income--1",
+      "description": "",
+      "date": "2026-04-09T16:03:51.676Z"
+    },
+    {
+      "id": 1775750662746,
+      "type": "income",
+      "amount": 10000,
+      "category": "income--1",
+      "description": "",
+      "date": "2026-04-09T16:04:22.746Z"
+    },
+    {
+      "id": 1775751090504,
+      "type": "income",
+      "amount": 50000,
+      "category": "3",
+      "description": "",
+      "date": "2026-04-09T16:11:30.504Z"
+    }
+  ]
+}

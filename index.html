@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget Tracker</title>
+</head>
+<body>
+    <h1>💰 Budget Tracker</h1>
+
+    <!-- Add Transaction -->
+    <h3>Add Transaction</h3>
+    <form id="form">
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+
+        <input type="number" id="amount" placeholder="Amount" required>
+        <input type="text" id="category" placeholder="Category">
+
+        <button type="submit">Add</button>
+    </form>
+
+    <h3 id="msg"></h3>
+
+    <!-- Balance -->
+    <h3>💰 Balance: <span id="balance">0</span></h3>
+
+    <!-- Transactions -->
+    <h3>📋 Transactions</h3>
+    <ul id="transactions"></ul>
+
+    <!-- Summary -->
+    <h3>📊 Monthly Summary</h3>
+    <pre id="summary"></pre>
+
+    <script>
+        const API = "";
+
+        // Add transaction
+        document.getElementById("form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const data = {
+                type: document.getElementById("type").value,
+                amount: document.getElementById("amount").value,
+                category: document.getElementById("category").value
+            };
+
+            await fetch(API + "/add", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+
+            document.getElementById("msg").innerText = "Added!";
+            loadData();
+        });
+
+        // Load all data
+        async function loadData() {
+            // Balance
+            const bal = await fetch(API + "/balance").then(r => r.json());
+            document.getElementById("balance").innerText = bal.balance;
+
+            // Transactions
+            const tx = await fetch(API + "/transactions").then(r => r.json());
+            const list = document.getElementById("transactions");
+            list.innerHTML = "";
+            tx.forEach(t => {
+                const li = document.createElement("li");
+                li.innerText = `${t.type} - ${t.amount} (${t.category})`;
+                list.appendChild(li);
+            });
+
+            // Summary
+            const sum = await fetch(API + "/summary").then(r => r.json());
+            document.getElementById("summary").innerText = JSON.stringify(sum, null, 2);
+        }
+
+        loadData();
+    </script>
+</body>
+</html>
