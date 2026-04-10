@@ -36,9 +36,9 @@ jobs:
           fi
 
           # Stop old container
-          docker-compose down
+          docker compose down
 
           # Build and run new container
-          docker-compose up -d --build
+          docker compose up -d --build
 
           EOF
