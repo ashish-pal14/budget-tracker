@@ -55,6 +55,86 @@
       "category": "3",
       "description": "",
       "date": "2026-04-09T16:11:30.504Z"
+    },
+    {
+      "id": 1775754197092,
+      "type": "income",
+      "amount": 100,
+      "category": "general",
+      "description": "",
+      "date": "2026-04-09T17:03:17.092Z"
+    },
+    {
+      "id": 1775754197291,
+      "type": "income",
+      "amount": 100,
+      "category": "general",
+      "description": "",
+      "date": "2026-04-09T17:03:17.291Z"
+    },
+    {
+      "id": 1775754197944,
+      "type": "income",
+      "amount": 100,
+      "category": "general",
+      "description": "",
+      "date": "2026-04-09T17:03:17.944Z"
+    },
+    {
+      "id": 1775754198095,
+      "type": "income",
+      "amount": 100,
+      "category": "general",
+      "description": "",
+      "date": "2026-04-09T17:03:18.095Z"
+    },
+    {
+      "id": 1775754198240,
+      "type": "income",
+      "amount": 100,
+      "category": "general",
+      "description": "",
+      "date": "2026-04-09T17:03:18.240Z"
+    },
+    {
+      "id": 1775754198391,
+      "type": "income",
+      "amount": 100,
+      "category": "general",
+      "description": "",
+      "date": "2026-04-09T17:03:18.391Z"
+    },
+    {
+      "id": 1775754198543,
+      "type": "income",
+      "amount": 100,
+      "category": "general",
+      "description": "",
+      "date": "2026-04-09T17:03:18.543Z"
+    },
+    {
+      "id": 1775754198688,
+      "type": "income",
+      "amount": 100,
+      "category": "general",
+      "description": "",
+      "date": "2026-04-09T17:03:18.688Z"
+    },
+    {
+      "id": 1775754198892,
+      "type": "income",
+      "amount": 100,
+      "category": "general",
+      "description": "",
+      "date": "2026-04-09T17:03:18.892Z"
+    },
+    {
+      "id": 1775754199121,
+      "type": "income",
+      "amount": 100,
+      "category": "general",
+      "description": "",
+      "date": "2026-04-09T17:03:19.121Z"
     }
   ]
 }
