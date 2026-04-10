@@ -1,0 +1,36 @@
+name: CD - Deploy to AWS
+
+on:
+  workflow_dispatch:   # manual trigger
+  # OR auto trigger from CI:
+  # workflow_run:
+  #   workflows: ["CI - Build & Push Docker Image"]
+  #   types:
+  #     - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.AWS_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.AWS_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to EC2
+        run: |
+          ssh ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }} << 'EOF'
+
+          cd /opt/budget-tracker
+
+          # Pull latest image
+          docker pull ${{ secrets.DOCKER_USERNAME }}/budget-app:latest
+
+          # Restart container
+          docker compose down
+          docker compose up -d
+
+          EOF

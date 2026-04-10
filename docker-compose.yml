@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   budget-app:
-    build: .
+    image: ashishpal14/budget-app:latest
     container_name: budget-tracker-container
     ports:
       - "3000:3000"
