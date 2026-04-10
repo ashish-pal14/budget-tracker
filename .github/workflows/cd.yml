@@ -3,10 +3,10 @@ name: CD - Deploy to AWS
 on:
   workflow_dispatch:   # manual trigger
   # OR auto trigger from CI:
-  # workflow_run:
-  #   workflows: ["CI - Build & Push Docker Image"]
-  #   types:
-  #     - completed
+   workflow_run:
+     workflows: ["CI - Build & Push Docker Image"]
+     types:
+       - completed
 
 jobs:
   deploy:
